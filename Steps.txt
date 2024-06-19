@@ -7,3 +7,7 @@
 ->follow the code to upload it to Media Library inside Cloudinary 
 ->get public_id from the image through onUpload property 
 ->CLd Image to upload image 
+->ShadCN UI for styling components
+->https://github.com/shadcn-ui/ui
+->https://github.com/shadcn-ui/ui/blob/main/apps/www/app/(app)/examples/dashboard/page.tsx (Dashboard)
+->ShadCN UI components needs to be installed via npm

@@ -1,0 +1,9 @@
+->Make a Next JS project 
+->Run npm run dev
+->Install Cloudinary library 
+->visit this URL for above https://next.cloudinary.dev/installation
+->Add an .env file 
+->CldUploadButton: component used to upload file 
+->follow the code to upload it to Media Library inside Cloudinary 
+->get public_id from the image through onUpload property 
+->CLd Image to upload image 

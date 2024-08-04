@@ -1,10 +1,17 @@
 "use client";
 
  
+import { Heart } from "@/components/heart";
 import { CldImage } from "next-cloudinary";
 
 export function CloudinaryImage(props: any){
-    return <CldImage {...props} />;
+    return (
+    <div>
+    <CldImage {...props} />
+    <Heart/>
+    </div>
+    );
+    
 }
 
 

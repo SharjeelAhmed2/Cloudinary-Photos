@@ -11,3 +11,41 @@
 ->https://github.com/shadcn-ui/ui
 ->https://github.com/shadcn-ui/ui/blob/main/apps/www/app/(app)/examples/dashboard/page.tsx (Dashboard)
 ->ShadCN UI components needs to be installed via npm
+->https://cloudinary.com/documentation/search_method for uploading images 
+->https://cloudinary.com/documentation/node_quickstart setup for above 
+
+August 4 
+
+->get the public_id from the result
+->CldImage is a client only component
+
+->imageprop.tsx be like :
+1. Function Signature and Parameters
+First Function:
+typescript
+Copy code
+export function CloudinaryImage(props: any){
+    return <CldImage {...props} />;
+}
+Parameters: Takes a single props parameter of type any.
+Behavior: Directly spreads the props object into the CldImage component. This means that CldImage receives all the properties passed to CloudinaryImage, including any custom ones.
+Type Safety: Since props is of type any, there’s no type checking or IntelliSense support. This can lead to runtime errors if props is not what CldImage expects.
+Second Function:
+typescript
+Copy code
+export function CloudinaryImage({ public_id, ...props}: {public_id:string}){
+    return <CldImage 
+        width="500"
+        height="500"
+        {...props}
+        src={public_id}
+        sizes="100vw"
+        alt="image"
+    />;
+}
+Parameters: Uses object destructuring to extract public_id and gather the remaining properties into props. The function expects an object where public_id is a required string.
+Behavior: Sets public_id as the src for the CldImage component and adds additional fixed properties (width, height, sizes, and alt). Other properties are passed along using the spread operator.
+Type Safety: This approach is more type-safe because public_id is explicitly defined as a string in the function signature. This allows TypeScript to enforce the type of public_id and provide better IntelliSense.
+
+
+

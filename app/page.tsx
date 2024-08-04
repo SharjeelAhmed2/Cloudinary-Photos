@@ -7,7 +7,7 @@ import { CldImage } from 'next-cloudinary';
 import { useState } from "react";
  
 // We get a json with event and info
-type UploadImageResult = 
+export type UploadImageResult = 
 {
     info:{
       public_id:string
@@ -35,3 +35,5 @@ export default function Home() {
     </main>
   );
 }
+
+

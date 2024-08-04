@@ -11,8 +11,8 @@ export default async function Gallery()
     // Search API method 
   const results = await cloudinary.v2.search
   .expression('resource_type:image')
-  .sort_by('public_id','desc')
-  .max_results(5)
+  .sort_by('created_at','desc')
+  .max_results(10)
   .execute() as {resources: searchResult[]};
 
 //  console.log(results);
@@ -27,7 +27,7 @@ export default async function Gallery()
                     Gallery
                 </h1>
                <UploadButton />
-</div>
+           </div>
             <div className="grid grid-cols-4 gap-4">   
                {results.resources.map((result)=>(
                 <CloudinaryImage

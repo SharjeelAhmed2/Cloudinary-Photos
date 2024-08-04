@@ -49,3 +49,10 @@ Type Safety: This approach is more type-safe because public_id is explicitly def
 
 
 
+in tailwind this flex flex-col gap-8 means margin bottom 
+
+
+ In Next.js, routing (such as using useRouter from next/router) is generally used within client-side components. This is because the router 
+ functionality depends on the browser environment, which only exists on the client side.
+
+ in cloudinary   .sort_by('created_at) means sort by created At date 

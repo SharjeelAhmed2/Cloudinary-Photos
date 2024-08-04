@@ -24,13 +24,7 @@ export default function Home() {
            setImage(result.info.public_id);
         }}
         uploadPreset="ljfpa9nz" />
-    {image &&<CldImage
-      width="960"
-      height="600"
-      src={image}
-      sizes="100vw"
-      alt="Description of my image"
-    />}
+  
     
     </main>
   );
